@@ -25,7 +25,7 @@ request_data = {
 	"course": subject,
 	"group": "college",
 	"op": "Show graph",
-	"form_build_id": "form-rt9s6sYvkKyKQ0OY6uFSHzl1qlEc1ji2QagCWbv-RQA",
+	"form_build_id": "",
 	"form_id": "cam_app_charts_my_form_1"
 }
 
