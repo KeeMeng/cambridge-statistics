@@ -3,10 +3,16 @@ import html
 import json
 import requests
 
+# year = "2021"
+# subject = "Computer Science"
+year = input("Year: ")
+subject = input("Subject: ")
+
+# Don't change request data
 request_data = {
 	"MIME Type": "application/x-www-form-urlencoded",
 	"period": "year",
-	"year": "2021",
+	"year": year,
 	"app[applications]": "applications",
 	"open[open]": "open",
 	"off[offers]": "offers",
@@ -14,12 +20,12 @@ request_data = {
 	"acc[acceptances]": "acceptances",
 	"summer[summer]": "summer",
 	"what": "course",
-	"courses[]": "Computer Science",
+	"courses[]": subject,
 	"college": "Churchill College",
-	"course": "Computer Science",
+	"course": subject,
 	"group": "college",
 	"op": "Show graph",
-	"form_build_id": "form-iBfHXjLV5ynTpTvfrC6T6_9VlgiQBtFaxOiKnlISU70",
+	"form_build_id": "form-rt9s6sYvkKyKQ0OY6uFSHzl1qlEc1ji2QagCWbv-RQA",
 	"form_id": "cam_app_charts_my_form_1"
 }
 
@@ -46,7 +52,7 @@ for i in range(6):
 	output += "\t" + data[i]["name"]
 
 
-for i in range(29):
+for i in range(len(colleges)):
 	output += f"\n{colleges[i]}\t{data[0]['data'][i]}\t{data[1]['data'][i]}\t{data[2]['data'][i]}\t{data[3]['data'][i]}\t{data[4]['data'][i]}\t{data[5]['data'][i]}"
 
 print(output)
